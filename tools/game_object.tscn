@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://qwc1d6732ent"]
+
+[ext_resource type="Script" path="res://tools/game_object.gd" id="1_v5x8b"]
+
+[node name="GameObject" type="Area3D"]
+script = ExtResource("1_v5x8b")
+text = "null"

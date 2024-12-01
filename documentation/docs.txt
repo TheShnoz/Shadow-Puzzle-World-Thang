@@ -1,0 +1,6 @@
+TODOLIST
+- make inspiration entity to give genomes to player
+- sound effects
+- add all genomes
+- genome change animation
+- puzzles

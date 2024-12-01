@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GenomeInfo" load_steps=3 format=3 uid="uid://cbafugkjafo6u"]
+
+[ext_resource type="Script" path="res://content/characters/player/genome.gd" id="1_2udn4"]
+[ext_resource type="SpriteFrames" uid="uid://n32k0dgpmvet" path="res://content/characters/player/spriteframes/rockspriteframes.tres" id="1_pu04o"]
+
+[resource]
+script = ExtResource("1_2udn4")
+Spriteframes = ExtResource("1_pu04o")
+Genome_name = "Rock"
+speed = 3.0

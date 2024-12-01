@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://dcvmebcwcivkn"]
+
+[ext_resource type="Texture2D" uid="uid://baekufpegevxa" path="res://content/textures/Grass/Grass_01-128x128.png" id="1_8in1x"]
+[ext_resource type="Texture2D" uid="uid://c81bwok7tf1hn" path="res://content/textures/Tile/Tile_13-128x128.png" id="1_swm47"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0a1eq"]
+albedo_texture = ExtResource("1_8in1x")
+uv1_scale = Vector3(2.045, 2.045, 2.045)
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_jxchf"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qo40y"]
+albedo_texture = ExtResource("1_swm47")
+uv1_scale = Vector3(1.87, 1.87, 1.87)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_28apk"]
+
+[node name="meshes" type="Node3D"]
+
+[node name="Grass" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_0a1eq")
+mesh = SubResource("PlaneMesh_jxchf")
+surface_material_override/0 = SubResource("StandardMaterial3D_0a1eq")
+
+[node name="Tile" type="MeshInstance3D" parent="."]
+visible = false
+material_override = SubResource("StandardMaterial3D_qo40y")
+mesh = SubResource("PlaneMesh_28apk")
+surface_material_override/0 = SubResource("StandardMaterial3D_qo40y")

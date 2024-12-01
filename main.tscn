@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://1d51yopskjkk"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_lxqle"]
+[ext_resource type="PackedScene" uid="uid://yoij2ssa34np" path="res://content/characters/player/player.tscn" id="3_whqnl"]
+
+[node name="Main" type="Node"]
+script = ExtResource("1_lxqle")
+levelpath = "res://content/levels/office.tscn"
+
+[node name="Player" parent="." instance=ExtResource("3_whqnl")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.805, 0)

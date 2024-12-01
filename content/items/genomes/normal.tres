@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="GenomeInfo" load_steps=3 format=3 uid="uid://db0lfja754fyr"]
+
+[ext_resource type="Script" path="res://content/characters/player/genome.gd" id="1_013xj"]
+[ext_resource type="SpriteFrames" uid="uid://bqwtkp01ub00e" path="res://content/characters/player/spriteframes/defaultspriteframes.tres" id="1_u73x7"]
+
+[resource]
+script = ExtResource("1_013xj")
+Spriteframes = ExtResource("1_u73x7")
+Genome_name = "Normal"
+speed = 5.0

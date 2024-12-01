@@ -1,0 +1,269 @@
+[gd_scene load_steps=19 format=3 uid="uid://db8uj7appyykc"]
+
+[ext_resource type="ArrayMesh" uid="uid://rttc1unym7um" path="res://content/models/office/computer.obj" id="3_8i4cm"]
+[ext_resource type="ArrayMesh" uid="uid://bfbn0uxb3o0cp" path="res://content/models/office/cubicle.obj" id="3_bur7i"]
+[ext_resource type="Material" uid="uid://bodaveqjkp83m" path="res://content/textures/custom/computerON.tres" id="4_3o78q"]
+[ext_resource type="Material" uid="uid://gj42x2qcvtul" path="res://content/textures/custom/cork.tres" id="4_4wurm"]
+[ext_resource type="ArrayMesh" uid="uid://d3gw4yne3sa8" path="res://content/models/office/desk.obj" id="5_08h6t"]
+[ext_resource type="Texture2D" uid="uid://u5dfem2rh8f7" path="res://content/textures/Wood/Wood_25-128x128.png" id="7_mahl6"]
+[ext_resource type="Texture2D" uid="uid://dbh0l0ai82m50" path="res://content/models/office/shittycatposter.jpg" id="8_g55nb"]
+[ext_resource type="Script" path="res://tools/game_object.gd" id="9_2cyqw"]
+[ext_resource type="Texture2D" uid="uid://dowr8kv6weyce" path="res://content/models/office/shittyfishposter.jpg" id="10_o1cip"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_m4355"]
+albedo_color = Color(0.753984, 0.753984, 0.753984, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ykurb"]
+albedo_color = Color(0.147672, 0.147672, 0.147672, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_swklg"]
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_fyve3"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0, 0.5, -0.5, 0, 0.5, 0.5, 0.5, 0.5, 0.5, 0, 0.5, -0.5, 0.5, 0.4844, -0.5, 0, 0.4844, 0.5, 0.5, 0.4844, 0.5, 0.5, 0.4844, -0.5, 0, 0.4844, 0.5, 0, 0.4844, -0.5, 0.5, 0.5, -0.5, 0.5, 0.4844, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.4844, 0.5, 0.5, 0.4844, -0.5, 0, 0.5, 0.5, 0, 0.5, -0.5, 0, 0.4844, -0.5, 0, 0.4844, 0.5, 0, 0.5, 0.5, 0, 0.4844, -0.5, 0.5, 0.5, -0.5, 0, 0.5, -0.5, 0.5, 0.4844, -0.5, 0.5, 0.4844, -0.5, 0, 0.5, -0.5, 0, 0.4844, 0.5, 0.5, 0.5, 0.5, 0.5, 0.4844, 0.5, 0, 0.5, 0.5, 0, 0.5, 0.5, 0.5, 0.4844, 0.5, 0, 0.4844, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0, 0.5, 0.5, 0, 0.5, 0.5, 0.5, -0.5, 0.5, 0, -0.5, 0.4844, 0.5, 0.5, 0.4844, 0, 0.5, 0.4844, 0.5, -0.5, 0.4844, 0.5, -0.5, 0.4844, 0, 0.5, 0.4844, 0, -0.5, 0.5, 0.5, 0.5, 0.4844, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, -0.5, 0.4844, 0.5, 0.5, 0.4844, 0.5, -0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, 0.4844, 0, 0.5, 0.4844, 0, 0.5, 0.5, 0, -0.5, 0.4844, 0, -0.5, 0.5, 0.5, 0.5, 0.5, 0, 0.5, 0.4844, 0.5, 0.5, 0.4844, 0.5, 0.5, 0.5, 0, 0.5, 0.4844, 0, 0.5, 0.5, 0.5, -0.5, 0.4844, 0.5, -0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, 0.4844, 0.5, -0.5, 0.4844, 0, -0.5, -0.4875, 0.5, 0.5, -0.4875, 0.5, -0.5, -0.4875, 0, 0.5, -0.4875, 0, 0.5, -0.4875, 0.5, -0.5, -0.4875, 0, -0.5, -0.5031, 0.5, 0.5, -0.5031, 0, 0.5, -0.5031, 0.5, -0.5, -0.5031, 0.5, -0.5, -0.5031, 0, 0.5, -0.5031, 0, -0.5, -0.4875, 0.5, 0.5, -0.5031, 0.5, 0.5, -0.4875, 0.5, -0.5, -0.4875, 0.5, -0.5, -0.5031, 0.5, 0.5, -0.5031, 0.5, -0.5, -0.4875, 0, 0.5, -0.4875, 0, -0.5, -0.5031, 0, 0.5, -0.5031, 0, 0.5, -0.4875, 0, -0.5, -0.5031, 0, -0.5, -0.4875, 0.5, 0.5, -0.4875, 0, 0.5, -0.5031, 0.5, 0.5, -0.5031, 0.5, 0.5, -0.4875, 0, 0.5, -0.5031, 0, 0.5, -0.4875, 0.5, -0.5, -0.5031, 0.5, -0.5, -0.4875, 0, -0.5, -0.4875, 0, -0.5, -0.5031, 0.5, -0.5, -0.5031, 0, -0.5, -0.2938, 0.5, -0.4844, -0.2938, 0, -0.4844, -0.4906, 0.5, -0.4844, -0.4906, 0.5, -0.4844, -0.2938, 0, -0.4844, -0.4906, 0, -0.4844, -0.2938, 0.5, -0.5, -0.2938, 0.5, -0.4844, -0.4906, 0.5, -0.5, -0.4906, 0.5, -0.5, -0.2938, 0.5, -0.4844, -0.4906, 0.5, -0.4844, -0.2938, 0, -0.5, -0.4906, 0, -0.5, -0.2938, 0, -0.4844, -0.2938, 0, -0.4844, -0.4906, 0, -0.5, -0.4906, 0, -0.4844, -0.2938, 0.5, -0.5, -0.2938, 0, -0.5, -0.2938, 0.5, -0.4844, -0.2938, 0.5, -0.4844, -0.2938, 0, -0.5, -0.2938, 0, -0.4844, -0.4906, 0.5, -0.5, -0.4906, 0.5, -0.4844, -0.4906, 0, -0.5, -0.4906, 0, -0.5, -0.4906, 0.5, -0.4844, -0.4906, 0, -0.4844, -0.2938, 0.5, -0.5, -0.4906, 0.5, -0.5, -0.2938, 0, -0.5, -0.2938, 0, -0.5, -0.4906, 0.5, -0.5, -0.4906, 0, -0.5, 0.5, 0.5, -0.4844, 0.5, 0, -0.4844, 0.0937, 0.5, -0.4844, 0.0937, 0.5, -0.4844, 0.5, 0, -0.4844, 0.0937, 0, -0.4844, 0.5, 0.5, -0.5, 0.5, 0.5, -0.4844, 0.0937, 0.5, -0.5, 0.0937, 0.5, -0.5, 0.5, 0.5, -0.4844, 0.0937, 0.5, -0.4844, 0.5, 0, -0.5, 0.0937, 0, -0.5, 0.5, 0, -0.4844, 0.5, 0, -0.4844, 0.0937, 0, -0.5, 0.0937, 0, -0.4844, 0.5, 0.5, -0.5, 0.5, 0, -0.5, 0.5, 0.5, -0.4844, 0.5, 0.5, -0.4844, 0.5, 0, -0.5, 0.5, 0, -0.4844, 0.0937, 0.5, -0.5, 0.0937, 0.5, -0.4844, 0.0937, 0, -0.5, 0.0937, 0, -0.5, 0.0937, 0.5, -0.4844, 0.0937, 0, -0.4844, 0.5, 0.5, -0.5, 0.0937, 0.5, -0.5, 0.5, 0, -0.5, 0.5, 0, -0.5, 0.0937, 0.5, -0.5, 0.0937, 0, -0.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qdomx"]
+albedo_texture = ExtResource("7_mahl6")
+
+[sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_1qrji"]
+points = PackedVector3Array(0.05, 0.775, 0.075, -1.2, 0.775, 0.075, 0.05, 0.724931, 0.075, 0.05, 0.775, -2.425, -1.2, 0.724931, 0.075, -1.2, 0.775, -2.425, 0.0249168, 0, 0.0248337, 0.05, 0.724931, -2.425, -1.17504, 0, 0.0248337, -1.2, 0.724931, -2.425, 0.0249168, 0, -2.37508, -1.17504, 0, -2.37508)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4lnxj"]
+size = Vector3(8.54761, 7.59766, 5.28267)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_y1ho2"]
+albedo_color = Color(0, 0, 0, 1)
+emission_enabled = true
+emission = Color(0.129558, 0.129558, 0.129558, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_trj63"]
+size = Vector3(7.56702, 1, 4.25476)
+
+[node name="Office" type="Node3D"]
+
+[node name="Cubicles" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.66643, 0, -0.651066)
+
+[node name="PlayerDesk" type="MeshInstance3D" parent="Cubicles"]
+transform = Transform3D(-1.74846e-07, 0, 4, 0, 4, 0, -4, 0, -1.74846e-07, -5.23748, 0.119416, -7.04596)
+mesh = ExtResource("3_bur7i")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_4wurm")
+
+[node name="Computer" type="MeshInstance3D" parent="Cubicles/PlayerDesk"]
+transform = Transform3D(-0.00965278, 0, 0.374875, 0, 0.375, 0, -0.374875, 0, -0.00965278, 0.358533, 0.196648, 0.166063)
+mesh = ExtResource("3_8i4cm")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_m4355")
+surface_material_override/1 = ExtResource("4_3o78q")
+surface_material_override/2 = SubResource("StandardMaterial3D_ykurb")
+
+[node name="Cmptr" type="Area3D" parent="Cubicles/PlayerDesk/Computer"]
+transform = Transform3D(-0.666447, 0, 0.0171606, 0, 0.666667, 0, -0.0171606, 0, -0.666447, 0.392215, -0.604006, -0.984549)
+script = ExtResource("9_2cyqw")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cubicles/PlayerDesk/Computer/Cmptr"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.458628, 0, -0.204742)
+shape = SubResource("BoxShape3D_swklg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cubicles/PlayerDesk"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cubicles/PlayerDesk/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_fyve3")
+
+[node name="Desk" type="MeshInstance3D" parent="Cubicles/PlayerDesk"]
+transform = Transform3D(-0.25, 0, 2.18557e-08, 0, 0.25, 0, -2.18557e-08, 0, -0.25, 0.176521, 0.000181466, -0.134295)
+mesh = ExtResource("5_08h6t")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_qdomx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cubicles/PlayerDesk/Desk"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cubicles/PlayerDesk/Desk/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_1qrji")
+
+[node name="Sprite3D" type="Sprite3D" parent="Cubicles/PlayerDesk"]
+transform = Transform3D(-1.39876e-09, 0, -0.032, 0, 0.032, 0, 0.032, 0, -1.39876e-09, 0.479467, 0.313413, -0.284622)
+shaded = true
+texture = ExtResource("8_g55nb")
+
+[node name="GameObject" type="Area3D" parent="Cubicles/PlayerDesk/Sprite3D" node_paths=PackedStringArray("camswitch")]
+script = ExtResource("9_2cyqw")
+camswitch = NodePath("../Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cubicles/PlayerDesk/Sprite3D/GameObject"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.04767, -10.6932, 2.82814)
+shape = SubResource("BoxShape3D_4lnxj")
+
+[node name="Camera3D" type="Camera3D" parent="Cubicles/PlayerDesk/Sprite3D"]
+transform = Transform3D(7.8125, 0, 0, 0, 7.8125, 0, 0, 0, 7.8125, 0, 0.371017, 16.9235)
+current = true
+fov = 37.8493
+
+[node name="Cubicle2" type="MeshInstance3D" parent="Cubicles"]
+transform = Transform3D(-1.74846e-07, 0, 4, 0, 4, 0, -4, 0, -1.74846e-07, -5.23748, 0.119416, -2.97335)
+mesh = ExtResource("3_bur7i")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_4wurm")
+
+[node name="Computer" type="MeshInstance3D" parent="Cubicles/Cubicle2"]
+transform = Transform3D(-0.00965278, 0, 0.374875, 0, 0.375, 0, -0.374875, 0, -0.00965278, 0.358533, 0.196648, 0.166063)
+mesh = ExtResource("3_8i4cm")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_m4355")
+surface_material_override/1 = SubResource("StandardMaterial3D_y1ho2")
+surface_material_override/2 = SubResource("StandardMaterial3D_ykurb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cubicles/Cubicle2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cubicles/Cubicle2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_fyve3")
+
+[node name="Desk" type="MeshInstance3D" parent="Cubicles/Cubicle2"]
+transform = Transform3D(-0.25, 0, 2.18557e-08, 0, 0.25, 0, -2.18557e-08, 0, -0.25, 0.176521, 0.000181466, -0.134295)
+mesh = ExtResource("5_08h6t")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_qdomx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cubicles/Cubicle2/Desk"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cubicles/Cubicle2/Desk/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_1qrji")
+
+[node name="Cubicle3" type="MeshInstance3D" parent="Cubicles"]
+transform = Transform3D(-1.74846e-07, 0, 4, 0, 4, 0, -4, 0, -1.74846e-07, -5.23748, 0.119416, 1.10923)
+mesh = ExtResource("3_bur7i")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_4wurm")
+
+[node name="Computer" type="MeshInstance3D" parent="Cubicles/Cubicle3"]
+transform = Transform3D(-0.00965278, 0, 0.374875, 0, 0.375, 0, -0.374875, 0, -0.00965278, 0.358533, 0.196648, 0.166063)
+mesh = ExtResource("3_8i4cm")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_m4355")
+surface_material_override/1 = SubResource("StandardMaterial3D_y1ho2")
+surface_material_override/2 = SubResource("StandardMaterial3D_ykurb")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cubicles/Cubicle3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cubicles/Cubicle3/StaticBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.0106637)
+shape = SubResource("ConcavePolygonShape3D_fyve3")
+
+[node name="Desk" type="MeshInstance3D" parent="Cubicles/Cubicle3"]
+transform = Transform3D(-0.25, 0, 2.18557e-08, 0, 0.25, 0, -2.18557e-08, 0, -0.25, 0.176521, 0.000181466, -0.134295)
+mesh = ExtResource("5_08h6t")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_qdomx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cubicles/Cubicle3/Desk"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cubicles/Cubicle3/Desk/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_1qrji")
+
+[node name="CubicleR" type="MeshInstance3D" parent="Cubicles"]
+transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, -1.14264, 0.119416, -7.00331)
+mesh = ExtResource("3_bur7i")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_4wurm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cubicles/CubicleR"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cubicles/CubicleR/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_fyve3")
+
+[node name="Desk" type="MeshInstance3D" parent="Cubicles/CubicleR"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.176521, 0.000181466, 0.44354)
+mesh = ExtResource("5_08h6t")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_qdomx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cubicles/CubicleR/Desk"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cubicles/CubicleR/Desk/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_1qrji")
+
+[node name="Computer" type="MeshInstance3D" parent="Cubicles/CubicleR/Desk"]
+transform = Transform3D(0.0386113, 0, -1.4995, 0, 1.5, 0, 1.4995, 0, 0.0386113, -0.728049, 0.785868, -1.20143)
+mesh = ExtResource("3_8i4cm")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_m4355")
+surface_material_override/1 = SubResource("StandardMaterial3D_y1ho2")
+surface_material_override/2 = SubResource("StandardMaterial3D_ykurb")
+
+[node name="CubicleR2" type="MeshInstance3D" parent="Cubicles"]
+transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, -1.14264, 0.119416, -2.95112)
+mesh = ExtResource("3_bur7i")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_4wurm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cubicles/CubicleR2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cubicles/CubicleR2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_fyve3")
+
+[node name="Desk" type="MeshInstance3D" parent="Cubicles/CubicleR2"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.176521, 0.000181466, 0.44354)
+mesh = ExtResource("5_08h6t")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_qdomx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cubicles/CubicleR2/Desk"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cubicles/CubicleR2/Desk/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_1qrji")
+
+[node name="Computer" type="MeshInstance3D" parent="Cubicles/CubicleR2/Desk"]
+transform = Transform3D(0.0386113, 0, -1.4995, 0, 1.5, 0, 1.4995, 0, 0.0386113, -0.728049, 0.785868, -1.20143)
+mesh = ExtResource("3_8i4cm")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_m4355")
+surface_material_override/1 = SubResource("StandardMaterial3D_y1ho2")
+surface_material_override/2 = SubResource("StandardMaterial3D_ykurb")
+
+[node name="Sprite3D" type="Sprite3D" parent="Cubicles/CubicleR2"]
+transform = Transform3D(-1.74846e-09, 0, 0.04, 0, 0.04, 0, -0.04, 0, -1.74846e-09, -0.485819, 0.260013, -0.317307)
+shaded = true
+texture = ExtResource("10_o1cip")
+
+[node name="GameObject" type="Area3D" parent="Cubicles/CubicleR2/Sprite3D" node_paths=PackedStringArray("camswitch")]
+script = ExtResource("9_2cyqw")
+camswitch = NodePath("Camera3D")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cubicles/CubicleR2/Sprite3D/GameObject"]
+transform = Transform3D(1, 0, -1.42302e-18, 0, 1, 0, 1.42302e-18, 0, 1, 0.0227661, -5.99045, 3.31041)
+shape = SubResource("BoxShape3D_trj63")
+
+[node name="Camera3D" type="Camera3D" parent="Cubicles/CubicleR2/Sprite3D/GameObject"]
+transform = Transform3D(6.25, 0, -1.0842e-19, 0, 6.25, 0, 1.0842e-19, 0, 6.25, 0, 0, 7.15229)
+
+[node name="CubicleR3" type="MeshInstance3D" parent="Cubicles"]
+transform = Transform3D(-1.74846e-07, 0, -4, 0, 4, 0, 4, 0, -1.74846e-07, -1.14264, 0.119416, 1.06668)
+mesh = ExtResource("3_bur7i")
+skeleton = NodePath("../..")
+surface_material_override/0 = ExtResource("4_4wurm")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cubicles/CubicleR3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cubicles/CubicleR3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_fyve3")
+
+[node name="Desk" type="MeshInstance3D" parent="Cubicles/CubicleR3"]
+transform = Transform3D(0.25, 0, 0, 0, 0.25, 0, 0, 0, 0.25, -0.176521, 0.000181466, 0.44354)
+mesh = ExtResource("5_08h6t")
+skeleton = NodePath("../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_qdomx")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Cubicles/CubicleR3/Desk"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Cubicles/CubicleR3/Desk/StaticBody3D"]
+shape = SubResource("ConvexPolygonShape3D_1qrji")
+
+[node name="Computer" type="MeshInstance3D" parent="Cubicles/CubicleR3/Desk"]
+transform = Transform3D(0.0386113, 0, -1.4995, 0, 1.5, 0, 1.4995, 0, 0.0386113, -0.728049, 0.785868, -1.20143)
+mesh = ExtResource("3_8i4cm")
+skeleton = NodePath("../../../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_m4355")
+surface_material_override/1 = SubResource("StandardMaterial3D_y1ho2")
+surface_material_override/2 = SubResource("StandardMaterial3D_ykurb")
+
+[connection signal="_on_interact" from="Cubicles/PlayerDesk/Computer/Cmptr" to="." method="_on_cmptr__on_interact"]

@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://duehke7xfnjad"]
+
+[ext_resource type="Script" path="res://tools/cam_check.gd" id="1_qpaul"]
+
+[node name="CamCheck" type="Area3D"]
+script = ExtResource("1_qpaul")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

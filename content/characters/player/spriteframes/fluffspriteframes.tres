@@ -1,0 +1,82 @@
+[gd_resource type="SpriteFrames" load_steps=10 format=3 uid="uid://cf6ns8610h46"]
+
+[ext_resource type="Texture2D" uid="uid://c034fcpypvjhv" path="res://content/characters/player/FluffShadow.png" id="1_7y66i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycrw6"]
+atlas = ExtResource("1_7y66i")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pmdj5"]
+atlas = ExtResource("1_7y66i")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kmr53"]
+atlas = ExtResource("1_7y66i")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eheai"]
+atlas = ExtResource("1_7y66i")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w2ohr"]
+atlas = ExtResource("1_7y66i")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6s1n"]
+atlas = ExtResource("1_7y66i")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0fe0j"]
+atlas = ExtResource("1_7y66i")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aa2hk"]
+atlas = ExtResource("1_7y66i")
+region = Rect2(32, 64, 32, 32)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycrw6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pmdj5")
+}],
+"loop": true,
+"name": &"Back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kmr53")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eheai")
+}],
+"loop": true,
+"name": &"Forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w2ohr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_p6s1n")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0fe0j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aa2hk")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}]

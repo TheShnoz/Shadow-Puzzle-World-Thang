@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://u0m36o761526"]
+
+[ext_resource type="Script" path="res://tools/levelbase.gd" id="1_n2mmq"]
+[ext_resource type="Texture2D" uid="uid://dyr1h8g7jrctu" path="res://content/textures/Grass/Grass_20-128x128.png" id="2_ca53t"]
+[ext_resource type="ArrayMesh" uid="uid://d4ixmhhcubvhj" path="res://content/models/testmap/house.obj" id="3_m2gco"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_2t63x"]
+albedo_texture = ExtResource("2_ca53t")
+uv1_scale = Vector3(0.185, 0.185, 0.185)
+uv1_triplanar = true
+texture_filter = 0
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_ilkd4"]
+size = Vector2(30, 30)
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_6mjyc"]
+
+[sub_resource type="Environment" id="Environment_hq8pi"]
+background_mode = 2
+
+[node name="Node" type="Node" node_paths=PackedStringArray("startposition")]
+script = ExtResource("1_n2mmq")
+startposition = NodePath("Startpos")
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_2t63x")
+mesh = SubResource("PlaneMesh_ilkd4")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_6mjyc")
+
+[node name="Startpos" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.691386, 0)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_hq8pi")
+
+[node name="House" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.73477, 0, -2.51841)
+mesh = ExtResource("3_m2gco")

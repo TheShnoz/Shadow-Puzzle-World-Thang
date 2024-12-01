@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Genome" load_steps=2 format=3 uid="uid://fflo8aarjfey"]
+
+[ext_resource type="Script" path="res://content/characters/player/genome.gd" id="1_ux174"]
+
+[resource]
+script = ExtResource("1_ux174")
+Genome_name = ""

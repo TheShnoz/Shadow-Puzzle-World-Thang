@@ -1,0 +1,102 @@
+[gd_scene load_steps=7 format=3 uid="uid://yoij2ssa34np"]
+
+[ext_resource type="Script" path="res://content/characters/player/player.gd" id="1_bte7x"]
+[ext_resource type="Script" path="res://content/characters/player/genome_handler.gd" id="2_6qi5f"]
+[ext_resource type="SpriteFrames" uid="uid://bqwtkp01ub00e" path="res://content/characters/player/spriteframes/defaultspriteframes.tres" id="3_bxq8r"]
+[ext_resource type="PackedScene" uid="uid://dpind45baj06p" path="res://menus/player_ui.tscn" id="3_ilgfd"]
+[ext_resource type="Script" path="res://content/characters/player/collider.gd" id="4_hsaso"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_cqu50"]
+radius = 0.408861
+height = 1.388
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_bte7x")
+debug = true
+
+[node name="GenomeHandler" type="Node" parent="." node_paths=PackedStringArray("sprite")]
+script = ExtResource("2_6qi5f")
+sprite = NodePath("../Sprite")
+
+[node name="Sprite" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 0, 0, 0)
+billboard = 1
+texture_filter = 0
+sprite_frames = ExtResource("3_bxq8r")
+animation = &"Left"
+
+[node name="text" type="Label3D" parent="Sprite"]
+transform = Transform3D(0.333333, 0, 0, 0, 0.333333, 0, 0, 0, 0.333333, 0, 0.258376, 0)
+visible = false
+billboard = 1
+no_depth_test = true
+text = "E"
+font_size = 64
+outline_size = 127
+uppercase = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_cqu50")
+
+[node name="Collider" type="Area3D" parent="."]
+script = ExtResource("4_hsaso")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="Collider"]
+shape = SubResource("CapsuleShape3D_cqu50")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_energy = 2.3
+omni_range = 8.664
+
+[node name="PlayerUI" parent="." instance=ExtResource("3_ilgfd")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.623593, 0.781749, 0, -0.781749, 0.623593, 0, 6.53562, 5.28248)
+fov = 50.625
+
+[node name="PLAYERDEBUG" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="Window" type="Panel" parent="PLAYERDEBUG"]
+offset_right = 420.0
+offset_bottom = 137.0
+
+[node name="Data" type="VBoxContainer" parent="PLAYERDEBUG/Window"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="State" type="HBoxContainer" parent="PLAYERDEBUG/Window/Data"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="PLAYERDEBUG/Window/Data/State"]
+layout_mode = 2
+text = "state:"
+
+[node name="status" type="Label" parent="PLAYERDEBUG/Window/Data/State"]
+layout_mode = 2
+
+[node name="velocity" type="HBoxContainer" parent="PLAYERDEBUG/Window/Data"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="PLAYERDEBUG/Window/Data/velocity"]
+layout_mode = 2
+text = "velocity:"
+
+[node name="status" type="Label" parent="PLAYERDEBUG/Window/Data/velocity"]
+layout_mode = 2
+
+[node name="intarea" type="HBoxContainer" parent="PLAYERDEBUG/Window/Data"]
+layout_mode = 2
+
+[node name="name" type="Label" parent="PLAYERDEBUG/Window/Data/intarea"]
+layout_mode = 2
+text = "intarea:"
+
+[node name="status" type="Label" parent="PLAYERDEBUG/Window/Data/intarea"]
+layout_mode = 2
+
+[connection signal="genome_selected" from="PlayerUI" to="GenomeHandler" method="_on_player_ui_genome_selected"]

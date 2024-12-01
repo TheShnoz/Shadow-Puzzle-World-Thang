@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://24x52c34svge"]
+
+[ext_resource type="Texture2D" uid="uid://dak0qmdpurhbg" path="res://content/textures/Bricks/Bricks_01-128x128.png" id="1_wl2x7"]
+[ext_resource type="Script" path="res://tools/door.gd" id="2_s0tew"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_sm0nn"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_emlb2"]
+albedo_texture = ExtResource("1_wl2x7")
+uv1_scale = Vector3(5, 5, 5)
+texture_filter = 0
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_7ldwv"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_bg0db"]
+
+[node name="Testmap2" type="Node"]
+
+[node name="Entry" type="Marker3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.597118, 4.85148)
+
+[node name="Ground" type="MeshInstance3D" parent="."]
+transform = Transform3D(13.4965, 0, 0, 0, 0.136532, 0, 0, 0, 14.3008, 0, 0, 0)
+mesh = SubResource("BoxMesh_sm0nn")
+surface_material_override/0 = SubResource("StandardMaterial3D_emlb2")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="Ground"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Ground/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_7ldwv")
+
+[node name="door" type="Area3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.41681, 0, 0)
+script = ExtResource("2_s0tew")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="door"]
+shape = SubResource("BoxShape3D_bg0db")
