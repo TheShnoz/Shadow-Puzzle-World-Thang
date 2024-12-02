@@ -1,5 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://4du2ub3qa645"]
+[gd_scene load_steps=3 format=3 uid="uid://4du2ub3qa645"]
 
+[ext_resource type="Script" path="res://menus/menuinit.gd" id="1_a5lht"]
 [ext_resource type="Texture2D" uid="uid://bu4i83ec7qgpa" path="res://content/textures/TitleScreen.png" id="1_wj8ud"]
 
 [node name="menuinit" type="Control"]
@@ -9,6 +10,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_a5lht")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
@@ -40,10 +42,7 @@ grow_vertical = 2
 layout_mode = 2
 text = "New Game"
 
-[node name="Loadgame" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-text = "Continue"
-
 [node name="Settings" type="Button" parent="VBoxContainer"]
+visible = false
 layout_mode = 2
 text = "Settings"

@@ -15,8 +15,9 @@ enum state {INTERACTING, WALK, IDLE, GENOME}
 var currentstate : state
 #static var player_UI : Control
 var intarea : GameObject
-
+var soundplayer : AudioStreamPlayer3D
 func _ready() -> void:
+	soundplayer = $AudioStreamPlayer
 	if debug:
 		$PLAYERDEBUG.visible = true
 	else:
@@ -92,7 +93,7 @@ func _enter_state():
 			else:
 				_set_state(state.IDLE)
 		state.WALK:
-			pass
+			soundplayer.play()
 		state.IDLE:
 			$Sprite.pause()
 		state.GENOME:
@@ -103,7 +104,7 @@ func _exit_state():
 			#$Camera3D.current = true
 			pass
 		state.WALK:
-			pass
+			soundplayer.stop()
 		state.IDLE:
 			pass
 		state.GENOME:
@@ -121,7 +122,7 @@ func think(title :String, thought : String):
 	
 func getgenome() -> GenomeInfo:
 	return genomehandler.current
-
+	
 @onready var statedata = $PLAYERDEBUG/Window/Data/State/status
 @onready var velocitydata = $PLAYERDEBUG/Window/Data/velocity/status
 @onready var intareadata = $PLAYERDEBUG/Window/Data/intarea/status

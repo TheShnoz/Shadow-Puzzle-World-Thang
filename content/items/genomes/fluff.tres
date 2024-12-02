@@ -7,4 +7,4 @@
 script = ExtResource("1_cvwcx")
 Spriteframes = ExtResource("1_pef7e")
 Genome_name = "Fluff"
-speed = 6.0
+speed = 5.0

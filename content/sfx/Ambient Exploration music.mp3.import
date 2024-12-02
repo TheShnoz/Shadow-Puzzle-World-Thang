@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dc15krhrfrxl8"
+path="res://.godot/imported/Ambient Exploration music.mp3-e1bebe018434e06e3ee88db64532cae6.mp3str"
+
+[deps]
+
+source_file="res://content/sfx/Ambient Exploration music.mp3"
+dest_files=["res://.godot/imported/Ambient Exploration music.mp3-e1bebe018434e06e3ee88db64532cae6.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

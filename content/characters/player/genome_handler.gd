@@ -10,8 +10,8 @@ extends Node
 
 @export var sprite : AnimatedSprite3D
 var player
-
 signal genome_changed
+
 func _ready() -> void:
 	player = get_parent()
 	current = load("res://content/items/genomes/normal.tres")
@@ -24,9 +24,9 @@ func refresh():
 
 func _genomechanged():
 	emit_signal('genome_changed')
+
 	player.speed = current.speed
 	refresh()
-
 
 func _on_player_ui_genome_selected(genome: GenomeInfo) -> void:
 	changegenome(genome)
@@ -34,3 +34,4 @@ func _on_player_ui_genome_selected(genome: GenomeInfo) -> void:
 func changegenome(genome):
 	current = genome
 	refresh()
+	$AudioStreamPlayer.play()

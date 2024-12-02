@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://wn4bejd3ga1o"
+path="res://.godot/imported/form change.mp3-70282115622af7644ef6dc8a416f9329.mp3str"
+
+[deps]
+
+source_file="res://content/sfx/form change.mp3"
+dest_files=["res://.godot/imported/form change.mp3-70282115622af7644ef6dc8a416f9329.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

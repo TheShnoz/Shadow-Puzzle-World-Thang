@@ -7,7 +7,9 @@ var playerin = false
 func _ready() -> void:
 	playerin = false
 func _process(delta: float) -> void:
-	if playerin and on and player.getgenome().Genome_name != 'rock':
+	if player.getgenome().Genome_name == "Rock":
+		return
+	if playerin and on:
 		player.position.x += 5 * delta
 	else:
 		pass
