@@ -14,17 +14,17 @@ var player
 signal genome_changed
 func _ready() -> void:
 	player = get_parent()
+	current = load("res://content/items/genomes/normal.tres")
 	
 func refresh():
 	if current:
 		sprite.sprite_frames = current.Spriteframes
-		
 	else:
 		sprite.sprite_frames = load("res://content/characters/player/defaultspriteframes.tres")
 
 func _genomechanged():
 	emit_signal('genome_changed')
-	player.speed = current.speedds
+	player.speed = current.speed
 	refresh()
 
 

@@ -118,6 +118,9 @@ func _set_state(newstate : state):
 func think(title :String, thought : String):
 	$PlayerUI.title = title
 	$PlayerUI.text = thought
+	
+func getgenome() -> GenomeInfo:
+	return genomehandler.current
 
 @onready var statedata = $PLAYERDEBUG/Window/Data/State/status
 @onready var velocitydata = $PLAYERDEBUG/Window/Data/velocity/status

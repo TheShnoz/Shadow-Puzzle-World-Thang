@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://cexkx3gi2o21k"
+path="res://.godot/imported/shadow world low wind puzzle.obj-9e578e2a1f55295ac4548e244c548e34.mesh"
+
+[deps]
+
+files=["res://.godot/imported/shadow world low wind puzzle.obj-9e578e2a1f55295ac4548e244c548e34.mesh"]
+
+source_file="res://shadow world low wind puzzle.obj"
+dest_files=["res://.godot/imported/shadow world low wind puzzle.obj-9e578e2a1f55295ac4548e244c548e34.mesh", "res://.godot/imported/shadow world low wind puzzle.obj-9e578e2a1f55295ac4548e244c548e34.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
