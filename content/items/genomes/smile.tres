@@ -1,0 +1,118 @@
+[gd_resource type="Resource" script_class="GenomeInfo" load_steps=16 format=3 uid="uid://d1x8qro8andka"]
+
+[ext_resource type="Script" path="res://content/characters/player/genome.gd" id="1_sd0r8"]
+[ext_resource type="Texture2D" uid="uid://b4pg5vbmaago8" path="res://content/characters/player/SmileShadow.png" id="1_u177i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b55me"]
+atlas = ExtResource("1_u177i")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iaady"]
+atlas = ExtResource("1_u177i")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mh8q5"]
+atlas = ExtResource("1_u177i")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4kjhm"]
+atlas = ExtResource("1_u177i")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_032vu"]
+atlas = ExtResource("1_u177i")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0krn"]
+atlas = ExtResource("1_u177i")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6g776"]
+atlas = ExtResource("1_u177i")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_waq61"]
+atlas = ExtResource("1_u177i")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0v0qg"]
+atlas = ExtResource("1_u177i")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5klv"]
+atlas = ExtResource("1_u177i")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_w37tr"]
+atlas = ExtResource("1_u177i")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iitde"]
+atlas = ExtResource("1_u177i")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ufcdi"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b55me")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iaady")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mh8q5")
+}],
+"loop": true,
+"name": &"Back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4kjhm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_032vu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0krn")
+}],
+"loop": true,
+"name": &"Forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6g776")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_waq61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0v0qg")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5klv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_w37tr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iitde")
+}],
+"loop": true,
+"name": &"Right",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_sd0r8")
+Spriteframes = SubResource("SpriteFrames_ufcdi")
+Genome_name = "Smile"
+speed = 5.0
+flying = false

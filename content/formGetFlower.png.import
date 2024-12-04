@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://egatlndij2of"
-path.s3tc="res://.godot/imported/Roofs_02-128x128.png-01951c8d082f4a4938f7791baea62a72.s3tc.ctex"
+uid="uid://byax1wddcu8lf"
+path.s3tc="res://.godot/imported/formGetFlower.png-9603362da9fd71647baea12cf2784261.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://content/textures/Roofs/Roofs_02-128x128.png"
-dest_files=["res://.godot/imported/Roofs_02-128x128.png-01951c8d082f4a4938f7791baea62a72.s3tc.ctex"]
+source_file="res://content/formGetFlower.png"
+dest_files=["res://.godot/imported/formGetFlower.png-9603362da9fd71647baea12cf2784261.s3tc.ctex"]
 
 [params]
 

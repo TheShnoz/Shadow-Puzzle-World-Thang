@@ -8,3 +8,4 @@ script = ExtResource("1_2udn4")
 Spriteframes = ExtResource("1_pu04o")
 Genome_name = "Rock"
 speed = 3.0
+flying = false

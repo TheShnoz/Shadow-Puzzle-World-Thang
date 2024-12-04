@@ -1,0 +1,118 @@
+[gd_resource type="Resource" script_class="GenomeInfo" load_steps=16 format=3 uid="uid://cjrl58kaanl10"]
+
+[ext_resource type="Texture2D" uid="uid://elf2tcwn0ppq" path="res://content/characters/player/WingShadow.png" id="1_a626w"]
+[ext_resource type="Script" path="res://content/characters/player/genome.gd" id="1_r8l4d"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hkh73"]
+atlas = ExtResource("1_a626w")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4ffp"]
+atlas = ExtResource("1_a626w")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sgu5q"]
+atlas = ExtResource("1_a626w")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqka2"]
+atlas = ExtResource("1_a626w")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0lh3f"]
+atlas = ExtResource("1_a626w")
+region = Rect2(32, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6gn7o"]
+atlas = ExtResource("1_a626w")
+region = Rect2(64, 96, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3bxmg"]
+atlas = ExtResource("1_a626w")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_iijta"]
+atlas = ExtResource("1_a626w")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ufj4"]
+atlas = ExtResource("1_a626w")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_slidu"]
+atlas = ExtResource("1_a626w")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0yltt"]
+atlas = ExtResource("1_a626w")
+region = Rect2(32, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_um30r"]
+atlas = ExtResource("1_a626w")
+region = Rect2(64, 64, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4xt6r"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hkh73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4ffp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sgu5q")
+}],
+"loop": true,
+"name": &"Back",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqka2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0lh3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6gn7o")
+}],
+"loop": true,
+"name": &"Forward",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3bxmg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_iijta")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ufj4")
+}],
+"loop": true,
+"name": &"Left",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_slidu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0yltt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_um30r")
+}],
+"loop": true,
+"name": &"right",
+"speed": 5.0
+}]
+
+[resource]
+script = ExtResource("1_r8l4d")
+Spriteframes = SubResource("SpriteFrames_4xt6r")
+Genome_name = "Bird"
+speed = 5.0
+flying = true

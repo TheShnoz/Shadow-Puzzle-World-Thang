@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="GenomeInfo" load_steps=3 format=3 uid="uid://ce5ybgoy4x2p0"]
+
+[ext_resource type="SpriteFrames" uid="uid://knhirdobujtp" path="res://content/characters/player/spriteframes/flowerspriteframes.tres" id="1_3dc5t"]
+[ext_resource type="Script" path="res://content/characters/player/genome.gd" id="1_a0tic"]
+
+[resource]
+script = ExtResource("1_a0tic")
+Spriteframes = ExtResource("1_3dc5t")
+Genome_name = "Flower"
+speed = 5.0
+flying = false

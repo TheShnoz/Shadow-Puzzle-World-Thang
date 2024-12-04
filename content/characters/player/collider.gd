@@ -8,14 +8,16 @@ var inspirationsound : AudioStream = load('res://content/sfx/form get.mp3')
 func _process(delta: float) -> void:
 	search()
 signal newintarea(area: GameObject)
+
 func search():
 	for area in get_overlapping_areas():
 		if area is GameObject:
 			if area == intarea:
 				return
-			intarea = area
-			caninteract = true
-			emit_signal('newintarea', intarea)
+			else:
+				intarea = area
+				caninteract = true
+				emit_signal('newintarea', intarea)
 		if area is inspiration:
 			Globals.unlockedgenomes.append(area.genome)
 			$AudioStreamPlayer.play()

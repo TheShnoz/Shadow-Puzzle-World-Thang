@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ct8osyj55so8j"]
+
+[ext_resource type="Texture2D" uid="uid://jan6n72aaulq" path="res://content/OverworldDiamondPanels.png" id="1_6xbap"]
+[ext_resource type="Script" path="res://collectable.gd" id="1_k8gec"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g21o6"]
+
+[node name="Collectable" type="Sprite3D"]
+pixel_size = 0.0285
+billboard = 1
+texture_filter = 0
+texture = ExtResource("1_6xbap")
+hframes = 7
+script = ExtResource("1_k8gec")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+shape = SubResource("BoxShape3D_g21o6")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+omni_range = 14.051

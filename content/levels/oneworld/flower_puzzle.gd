@@ -5,6 +5,7 @@ var flowerscene = preload('res://flower.tscn')
 
 var puzzledone : bool = false
 var changedflowers : int = 0
+
 func _ready() -> void:
 	for i in flowercount:
 		var x = randf_range(- (.5 *spawnradius), (.5 *spawnradius))
@@ -19,4 +20,5 @@ func _on_change():
 	changedflowers += 1
 	if changedflowers >= flowercount:
 		puzzledone = true
+		$FlowerCollectable.visible = true
 		print('flowers done')

@@ -37,6 +37,7 @@ func _process(delta: float) -> void:
 		velocity.y = 0
 	else:
 		velocity.y = -9.8
+
 func _update_state(delta : float) -> void:
 	var movedir = Input.get_vector('left', 'right', 'up', 'down')
 	#movedir.y = Input.get_axis("up", "down")
@@ -87,11 +88,12 @@ func _update_state(delta : float) -> void:
 	#if velocity.x == 0 and velocity.z == 0:
 		#$Sprite.pause()
 
+
 func _enter_state():
 	match currentstate:
 		state.INTERACTING:
-			if collider.intarea is GameObject: 
-				collider.intarea.interact()
+			if collider.intarea == GameObject: 
+				collider.intarea.interact(getgenome())
 			else:
 				_set_state(state.IDLE)
 		state.WALK:
@@ -131,4 +133,4 @@ func getgenome() -> GenomeInfo:
 func _debug():
 	statedata.text = state.find_key(currentstate)
 	velocitydata.text = str(velocity)
-	intareadata.text = str(collider.get_area())
+	intareadata.text = str(global_position)

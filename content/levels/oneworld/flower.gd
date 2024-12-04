@@ -1,9 +1,11 @@
 extends Sprite3D
 signal changed
 func _ready() -> void:
-	$Area3D.connect("area_entered", change)
+	$Area3D.connect("body_entered", change)
 
-func change(_area):
-	if frame == 0:
-		emit_signal('changed')
-	frame = 1
+func change(body):
+	if body.name == 'Player':
+		if body.getgenome().Genome_name == "Flower":
+			if frame == 0:
+				emit_signal('changed')
+			frame = 1

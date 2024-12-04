@@ -4,4 +4,3 @@
 
 [node name="GameObject" type="Area3D"]
 script = ExtResource("1_v5x8b")
-text = "null"

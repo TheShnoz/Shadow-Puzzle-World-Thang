@@ -8,3 +8,4 @@ script = ExtResource("1_013xj")
 Spriteframes = ExtResource("1_u73x7")
 Genome_name = "Normal"
 speed = 5.0
+flying = false
