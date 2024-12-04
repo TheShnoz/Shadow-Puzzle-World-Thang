@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://62vmcsukhnn4"]
+
+[ext_resource type="Texture2D" uid="uid://b4p3yrtcbjuqg" path="res://content/OverworldFlower.png" id="1_xaxbr"]
+[ext_resource type="Script" path="res://content/levels/oneworld/flower.gd" id="2_dsnfg"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_05r5o"]
+size = Vector3(0.391663, 1, 0.326538)
+
+[node name="Flower" type="Sprite3D"]
+transform = Transform3D(2.51, 0, 0, 0, 2.51, 0, 0, 0, 2.51, 1.48993, 0.43379, 0)
+billboard = 1
+shaded = true
+texture_filter = 0
+texture = ExtResource("1_xaxbr")
+hframes = 2
+script = ExtResource("2_dsnfg")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0794992, 0, 0.0534058)
+shape = SubResource("BoxShape3D_05r5o")

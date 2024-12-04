@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmyxqhxmqtxhc"
-path.s3tc="res://.godot/imported/Bricks_05-128x128.png-229ef9c4c843a5a7da0547d576044760.s3tc.ctex"
+uid="uid://b4p3yrtcbjuqg"
+path.s3tc="res://.godot/imported/OverworldFlower.png-892e9adeaade94546bc3d2d833f618f4.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://content/textures/Bricks/Bricks_05-128x128.png"
-dest_files=["res://.godot/imported/Bricks_05-128x128.png-229ef9c4c843a5a7da0547d576044760.s3tc.ctex"]
+source_file="res://content/OverworldFlower.png"
+dest_files=["res://.godot/imported/OverworldFlower.png-892e9adeaade94546bc3d2d833f618f4.s3tc.ctex"]
 
 [params]
 

@@ -20,6 +20,7 @@ func search():
 			Globals.unlockedgenomes.append(area.genome)
 			$AudioStreamPlayer.play()
 			area.queue_free()
+			
 	caninteract = false
 	intarea = null
 	

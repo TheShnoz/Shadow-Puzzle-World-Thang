@@ -33,8 +33,10 @@ func _process(delta: float) -> void:
 	_update_state(delta)
 	if debug:
 		_debug()
-	velocity.y = -9.8
-
+	if getgenome().flying:
+		velocity.y = 0
+	else:
+		velocity.y = -9.8
 func _update_state(delta : float) -> void:
 	var movedir = Input.get_vector('left', 'right', 'up', 'down')
 	#movedir.y = Input.get_axis("up", "down")
@@ -45,6 +47,7 @@ func _update_state(delta : float) -> void:
 				_set_state(state.INTERACTING)
 			if movedir.x != 0 or movedir.y !=0:
 				_set_state(state.WALK)
+			move_and_slide()
 			if Input.is_action_just_pressed("menu"):
 				$PlayerUI.menuvisible = !$PlayerUI.menuvisible
 		state.WALK:
@@ -63,7 +66,7 @@ func _update_state(delta : float) -> void:
 			if movedir.x > 0: $Sprite.play('Right')
 			#if movedir.y < 0: $Sprite.play('Forward')
 			#if movedir.y > 0: $Sprite.play('Back')
-			var relativedir = Vector3(movedir.x, -9.8, movedir.y).rotated(Vector3.UP, get_viewport().get_camera_3d().rotation.y)
+			var relativedir = Vector3(movedir.x, self.velocity.y, movedir.y).rotated(Vector3.UP, get_viewport().get_camera_3d().rotation.y)
 			#velocity = Vector3(movedir.x, -9.8, movedir.y) * speed
 			velocity = relativedir * speed
 			move_and_slide()
@@ -72,7 +75,6 @@ func _update_state(delta : float) -> void:
 				_set_state(state.IDLE)
 			if Input.is_action_just_pressed('interact'):
 				_set_state(state.IDLE)
-
 #func handle_animation():
 	#if movedir.y > 0:
 		#$Sprite.play('Back')
@@ -88,7 +90,7 @@ func _update_state(delta : float) -> void:
 func _enter_state():
 	match currentstate:
 		state.INTERACTING:
-			if collider.intarea:
+			if collider.intarea is GameObject: 
 				collider.intarea.interact()
 			else:
 				_set_state(state.IDLE)

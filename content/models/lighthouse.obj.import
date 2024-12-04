@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dpx25dsthckkm"
+path="res://.godot/imported/lighthouse.obj-6388e9d7765aa55099f260de4538be4e.mesh"
+
+[deps]
+
+files=["res://.godot/imported/lighthouse.obj-6388e9d7765aa55099f260de4538be4e.mesh"]
+
+source_file="res://content/models/lighthouse.obj"
+dest_files=["res://.godot/imported/lighthouse.obj-6388e9d7765aa55099f260de4538be4e.mesh", "res://.godot/imported/lighthouse.obj-6388e9d7765aa55099f260de4538be4e.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false
