@@ -17,4 +17,9 @@ grow_vertical = 2
 
 [node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer"]
 layout_mode = 2
-text = "adfoiajwpofjawpoibjpoajidsf"
+text = "You are alone.
+The world has been empty for a long time.
+Yet you hear a whisper, feel an inkling,
+of another like you.
+Within you is a burning desire
+to find them."
