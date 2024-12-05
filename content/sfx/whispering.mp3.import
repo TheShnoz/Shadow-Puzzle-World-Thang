@@ -2,13 +2,13 @@
 
 importer="mp3"
 type="AudioStreamMP3"
-uid="uid://de1ewqh8ecx6"
-path="res://.godot/imported/whispering.mp3-f38984ce6b7b1a66ac6fe5aff542fa0e.mp3str"
+uid="uid://cvqmpmeyagfak"
+path="res://.godot/imported/whispering.mp3-4c798f15e6df520355e2a4862530fe86.mp3str"
 
 [deps]
 
-source_file="res://content/sfx/whispering.mp3"
-dest_files=["res://.godot/imported/whispering.mp3-f38984ce6b7b1a66ac6fe5aff542fa0e.mp3str"]
+source_file="res://content/music/whispering.mp3"
+dest_files=["res://.godot/imported/whispering.mp3-4c798f15e6df520355e2a4862530fe86.mp3str"]
 
 [params]
 
