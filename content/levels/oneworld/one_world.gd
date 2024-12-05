@@ -3,7 +3,7 @@ extends Node
 @export_category("office")
 #var collectablesfound : int
 #var collectablesneeded : int
-var collectables_needed : int = 6
+var collectables_needed : int = 5
 @export var player : CharacterBody3D
 var computeron : bool = false
 func _ready() -> void:

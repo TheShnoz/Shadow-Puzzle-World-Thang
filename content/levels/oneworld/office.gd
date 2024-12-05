@@ -7,7 +7,7 @@ func _ready() -> void:
 	pass
 	
 func spawnthingy():
-	$Collectable.visible = true
+	$officecollectable.visible = true
 
 
 func _on_cmptr_body_entered(body: Node3D) -> void:

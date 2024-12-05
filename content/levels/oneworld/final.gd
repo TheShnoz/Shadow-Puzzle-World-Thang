@@ -8,8 +8,9 @@ func _ready() -> void:
 func hatch():
 	self.sprite_frames = finalform
 	hatched = true
+	$AudioStreamPlayer.play()
 	play()
-	$AudioStreamPlayer3D.play()
+
 
 
 func _on_area_3d_body_entered(body: Node3D) -> void:

@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" path="res://content/levels/intro.gd" id="1_vrcl0"]
 [ext_resource type="PackedScene" uid="uid://y7qo3k6gk2te" path="res://content/levels/oneworld/one_world.tscn" id="2_kqag4"]
-[ext_resource type="AudioStream" uid="uid://cvqmpmeyagfak" path="res://content/music/whispering.mp3" id="3_257pb"]
+[ext_resource type="AudioStream" uid="uid://cvqmpmeyagfak" path="res://content/sfx/whispering.mp3" id="3_257pb"]
 
 [node name="Intro" type="Node" node_paths=PackedStringArray("text")]
 script = ExtResource("1_vrcl0")
