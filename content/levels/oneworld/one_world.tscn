@@ -831,7 +831,7 @@ shape = SubResource("BoxShape3D_q2nm7")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0432129, 0, -0.0344238)
 shape = SubResource("BoxShape3D_6mj5a")
 
-[node name="AudioStreamPlayer3D" type="AudioStreamPlayer" parent="Final"]
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Final"]
 stream = ExtResource("45_c1nsh")
 
 [node name="OmniLight3D" type="OmniLight3D" parent="Final"]
