@@ -1,0 +1,146 @@
+[gd_scene load_steps=16 format=3 uid="uid://tb5kywg5c2vt"]
+
+[ext_resource type="Texture2D" uid="uid://bkmdp4j8voro7" path="res://content/Perfect_Ending.png" id="1_1nqjv"]
+[ext_resource type="Script" path="res://ending_scene.gd" id="1_4o7kl"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5jm0"]
+atlas = ExtResource("1_1nqjv")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ekoxv"]
+atlas = ExtResource("1_1nqjv")
+region = Rect2(64, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kri4n"]
+atlas = ExtResource("1_1nqjv")
+region = Rect2(128, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cf2cf"]
+atlas = ExtResource("1_1nqjv")
+region = Rect2(192, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l5wec"]
+atlas = ExtResource("1_1nqjv")
+region = Rect2(0, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i6hrh"]
+atlas = ExtResource("1_1nqjv")
+region = Rect2(64, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwb5c"]
+atlas = ExtResource("1_1nqjv")
+region = Rect2(128, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_plawe"]
+atlas = ExtResource("1_1nqjv")
+region = Rect2(192, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uko2t"]
+atlas = ExtResource("1_1nqjv")
+region = Rect2(0, 64, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gskph"]
+atlas = ExtResource("1_1nqjv")
+region = Rect2(64, 64, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_we8c0"]
+atlas = ExtResource("1_1nqjv")
+region = Rect2(128, 64, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bpd55"]
+atlas = ExtResource("1_1nqjv")
+region = Rect2(192, 64, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2qgc0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5jm0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ekoxv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kri4n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cf2cf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l5wec")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i6hrh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwb5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_plawe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uko2t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gskph")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_we8c0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bpd55")
+}],
+"loop": true,
+"name": &"default",
+"speed": 3.0
+}]
+
+[node name="EndingScene" type="Node"]
+script = ExtResource("1_4o7kl")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Control" type="Control" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Control/Control"]
+sprite_frames = SubResource("SpriteFrames_2qgc0")
+autoplay = "default"
+frame_progress = 0.0348779
+centered = false
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -216.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "Perfect just the way you are..."
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 10.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

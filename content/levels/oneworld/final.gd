@@ -15,4 +15,4 @@ func hatch():
 
 func _on_area_3d_body_entered(body: Node3D) -> void:
 	if hatched:
-		get_tree().change_scene_to_file('res://menus/menuinit.tscn')
+		get_tree().change_scene_to_file('res://ending_scene.tscn')
