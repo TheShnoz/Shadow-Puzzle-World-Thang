@@ -17,6 +17,7 @@ func _process(delta: float) -> void:
 	#if Input.is_action_just_pressed('esc'):
 		#$Final.hatch()
 	if Globals.collectables_found == collectables_needed:
+		Globals.speak('the egg has hatched...')
 		$Final.hatch()
 		
 	if player.global_position.x < -55:

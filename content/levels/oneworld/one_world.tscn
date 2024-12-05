@@ -1,4 +1,4 @@
-[gd_scene load_steps=95 format=3 uid="uid://y7qo3k6gk2te"]
+[gd_scene load_steps=99 format=3 uid="uid://y7qo3k6gk2te"]
 
 [ext_resource type="Script" path="res://content/levels/oneworld/one_world.gd" id="1_ctyd4"]
 [ext_resource type="PackedScene" uid="uid://yoij2ssa34np" path="res://content/characters/player/player.tscn" id="3_5wkc7"]
@@ -14,6 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://dbh0l0ai82m50" path="res://content/models/office/shittycatposter.jpg" id="11_ehf8r"]
 [ext_resource type="Texture2D" uid="uid://dowr8kv6weyce" path="res://content/models/office/shittyfishposter.jpg" id="12_55cq5"]
 [ext_resource type="ArrayMesh" uid="uid://btv7d1wo1834l" path="res://content/models/generator.obj" id="15_bjj14"]
+[ext_resource type="AudioStream" uid="uid://o3j3c1t2y3mo" path="res://content/sfx/electric.mp3" id="15_civ1h"]
 [ext_resource type="Resource" uid="uid://cbafugkjafo6u" path="res://content/items/genomes/rock.tres" id="15_wn25q"]
 [ext_resource type="ArrayMesh" uid="uid://cexkx3gi2o21k" path="res://shadow world low wind puzzle.obj" id="16_47ryf"]
 [ext_resource type="Texture2D" uid="uid://dobh0rdia5104" path="res://content/formGetRock.png" id="16_xj14h"]
@@ -154,6 +155,15 @@ uv1_scale = Vector3(2.61, 2.61, 2.61)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6tdqg"]
 albedo_texture = ExtResource("29_1sgbv")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_qwihr"]
+data = PackedVector3Array(1, 2, 1, 1, 2, -1, 1, 0, 1, 1, 0, 1, 1, 2, -1, 1, 0, -1, -1, 2, 1, -1, 0, 1, -1, 2, -1, -1, 2, -1, -1, 0, 1, -1, 0, -1, 1, 2, 1, -1, 2, 1, 1, 2, -1, 1, 2, -1, -1, 2, 1, -1, 2, -1, 1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 1, 2, 1, 1, 0, 1, -1, 2, 1, -1, 2, 1, 1, 0, 1, -1, 0, 1, 1, 2, -1, -1, 2, -1, 1, 0, -1, 1, 0, -1, -1, 2, -1, -1, 0, -1, 0, 2.875, 1.25, 0, 2.875, -1.25, 1.25, 2, 1.25, 1.25, 2, 1.25, 0, 2.875, -1.25, 1.25, 2, -1.25, 0, 2.875, 1.25, -1.25, 2, 1.25, 0, 2.875, -1.25, 0, 2.875, -1.25, -1.25, 2, 1.25, -1.25, 2, -1.25, 1.25, 2, 1.25, 1.25, 2, -1.25, -1.25, 2, 1.25, -1.25, 2, 1.25, 1.25, 2, -1.25, -1.25, 2, -1.25, 0, 2.875, 1.25, 1.25, 2, 1.25, -1.25, 2, 1.25, 1.25, 2, -1.25, 0, 2.875, -1.25, -1.25, 2, -1.25)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_cclsb"]
+data = PackedVector3Array(1, 2, 1, 1, 2, -1, 1, 0, 1, 1, 0, 1, 1, 2, -1, 1, 0, -1, -1, 2, 1, -1, 0, 1, -1, 2, -1, -1, 2, -1, -1, 0, 1, -1, 0, -1, 1, 2, 1, -1, 2, 1, 1, 2, -1, 1, 2, -1, -1, 2, 1, -1, 2, -1, 1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 1, 2, 1, 1, 0, 1, -1, 2, 1, -1, 2, 1, 1, 0, 1, -1, 0, 1, 1, 2, -1, -1, 2, -1, 1, 0, -1, 1, 0, -1, -1, 2, -1, -1, 0, -1, 0, 2.875, 1.25, 0, 2.875, -1.25, 1.25, 2, 1.25, 1.25, 2, 1.25, 0, 2.875, -1.25, 1.25, 2, -1.25, 0, 2.875, 1.25, -1.25, 2, 1.25, 0, 2.875, -1.25, 0, 2.875, -1.25, -1.25, 2, 1.25, -1.25, 2, -1.25, 1.25, 2, 1.25, 1.25, 2, -1.25, -1.25, 2, 1.25, -1.25, 2, 1.25, 1.25, 2, -1.25, -1.25, 2, -1.25, 0, 2.875, 1.25, 1.25, 2, 1.25, -1.25, 2, 1.25, 1.25, 2, -1.25, 0, 2.875, -1.25, -1.25, 2, -1.25)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_flga7"]
+data = PackedVector3Array(1, 2, 1, 1, 2, -1, 1, 0, 1, 1, 0, 1, 1, 2, -1, 1, 0, -1, -1, 2, 1, -1, 0, 1, -1, 2, -1, -1, 2, -1, -1, 0, 1, -1, 0, -1, 1, 2, 1, -1, 2, 1, 1, 2, -1, 1, 2, -1, -1, 2, 1, -1, 2, -1, 1, 0, 1, 1, 0, -1, -1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 1, 2, 1, 1, 0, 1, -1, 2, 1, -1, 2, 1, 1, 0, 1, -1, 0, 1, 1, 2, -1, -1, 2, -1, 1, 0, -1, 1, 0, -1, -1, 2, -1, -1, 0, -1, 0, 2.875, 1.25, 0, 2.875, -1.25, 1.25, 2, 1.25, 1.25, 2, 1.25, 0, 2.875, -1.25, 1.25, 2, -1.25, 0, 2.875, 1.25, -1.25, 2, 1.25, 0, 2.875, -1.25, 0, 2.875, -1.25, -1.25, 2, 1.25, -1.25, 2, -1.25, 1.25, 2, 1.25, 1.25, 2, -1.25, -1.25, 2, 1.25, -1.25, 2, 1.25, 1.25, 2, -1.25, -1.25, 2, -1.25, 0, 2.875, 1.25, 1.25, 2, 1.25, -1.25, 2, 1.25, 1.25, 2, -1.25, 0, 2.875, -1.25, -1.25, 2, -1.25)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fswpw"]
 atlas = ExtResource("43_dfwwa")
@@ -553,6 +563,9 @@ mesh = ExtResource("15_bjj14")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="Office/generator/MeshInstance3D/StaticBody3D"]
 shape = SubResource("ConcavePolygonShape3D_ppuq5")
 
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="Office/generator"]
+stream = ExtResource("15_civ1h")
+
 [node name="officecollectable" parent="Office" instance=ExtResource("30_dtx38")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.697025, 0.537416, -7.16743)
 visible = false
@@ -746,17 +759,32 @@ mesh = ExtResource("28_eby42")
 surface_material_override/0 = SubResource("StandardMaterial3D_dcn60")
 surface_material_override/1 = SubResource("StandardMaterial3D_6tdqg")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="House"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_qwihr")
+
 [node name="House2" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.07961, 0, -7.73823)
 mesh = ExtResource("28_eby42")
 surface_material_override/0 = SubResource("StandardMaterial3D_dcn60")
 surface_material_override/1 = SubResource("StandardMaterial3D_6tdqg")
 
+[node name="StaticBody3D" type="StaticBody3D" parent="House2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House2/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_cclsb")
+
 [node name="House3" type="MeshInstance3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.47243, 0, -15.9886)
 mesh = ExtResource("28_eby42")
 surface_material_override/0 = SubResource("StandardMaterial3D_dcn60")
 surface_material_override/1 = SubResource("StandardMaterial3D_6tdqg")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="House3"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="House3/StaticBody3D"]
+shape = SubResource("ConcavePolygonShape3D_flga7")
 
 [node name="fluffspiration" parent="." instance=ExtResource("31_ixn0k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -24.7964, 0.409875, -13.3593)
@@ -809,6 +837,18 @@ stream = ExtResource("45_c1nsh")
 [node name="OmniLight3D" type="OmniLight3D" parent="Final"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.2518, 0)
 omni_range = 6.175
+
+[node name="TutorialText" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.4723, 0, 7.12978)
+
+[node name="Label3D" type="Label3D" parent="TutorialText"]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0.0510719, 0)
+pixel_size = 0.0265
+shaded = true
+text = "Use the WASD keys to move
+TAB to access Genome Inventory"
+
+[node name="Sprite3D" type="Sprite3D" parent="TutorialText"]
 
 [connection signal="body_entered" from="Office/Cubicles/PlayerDesk/Computer/Cmptr" to="Office" method="_on_cmptr_body_entered"]
 [connection signal="body_entered" from="Office/generator" to="Office" method="_on_generator_body_entered"]
