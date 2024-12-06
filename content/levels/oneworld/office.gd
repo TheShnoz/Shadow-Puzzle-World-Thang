@@ -8,6 +8,7 @@ func _ready() -> void:
 	
 func spawnthingy():
 	$officecollectable.visible = true
+	$Cubicles/PlayerDesk/Computer/Cmptr.disabled = true
 
 
 func _on_cmptr_body_entered(body: Node3D) -> void:
